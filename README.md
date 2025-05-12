@@ -1,4 +1,4 @@
-Aplicación web para gestionar currículums (CVs) de forma local, permitiendo crear, visualizar, editar y eliminar perfiles. Los datos persisten gracias al uso de localStorage.
+Aplicación web simple para gestionar currículums de forma local, permitiendo crear, visualizar, editar y eliminar perfiles. Los datos persisten gracias al uso de localStorage.
 
 Tecnologías
 -JavaScript
@@ -14,10 +14,10 @@ Funcionalidades
 
 Instalación
 -Clona el repositorio:
-git clone  
+git clone https://github.com/peluca6666/Registro-de-CV.git
 
 Instala dependencias:
-npm install  
+-npm install  
 
 Ejecuta la aplicación:
-npm start  
+-npm start  
