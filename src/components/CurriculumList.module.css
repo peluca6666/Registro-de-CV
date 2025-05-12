@@ -1,0 +1,150 @@
+/*Diferentes colores para usar en el apartado de la lista de cvs */
+:root {
+    --primary-color: #3fb926; 
+    --secondary-color: #37c943;
+    --danger-color: #ff0000;
+    --gray-color: #6c757d;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  .container {
+    padding:1rem;
+    max-width: 1200px;
+  }
+  
+  /*título*/
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
+  
+  .noCurriculums {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Lista de curriculums*/
+  .list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .listItem {
+    background: rgb(255, 255, 255);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .listItem:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .listItemDetails {
+    margin-top: 1rem;
+    color: var(--dark-color);
+    line-height: 1.6;
+  }
+  
+  
+  /* Botones*/
+  .listItemButtons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  
+  .button {
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .viewButton {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .viewButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .deleteButton {
+    background-color: white;
+    color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+  }
+  
+  .deleteButton:hover {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .buscador {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .buscador input {
+    padding: 8px;
+    flex-grow: 1;
+  }
+
+  .filtrosContainer {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .searchInput {
+    flex: 2;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .selectInput {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+  }

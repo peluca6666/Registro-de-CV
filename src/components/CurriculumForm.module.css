@@ -1,0 +1,294 @@
+/* Variables de color y estilos base */
+:root {
+  --primary-color: #3fb926;
+  --secondary-color: #37c943;
+  --danger-color: #ff0000;
+  --gray-color: #6c757d;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --blue-accent: #00c3ff;
+  --light-gray: #f5f5f5;
+}
+
+/* Contenedor principal del formulario */
+.formContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Secciones del formulario */
+.formSection {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--blue-accent);
+  border-radius: 12px;
+  background-color: #ffffff;
+  transition: var(--transition);
+}
+
+.formSection:hover {
+  box-shadow: 0 2px 8px rgba(0, 195, 255, 0.1);
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0 0.5rem;
+  color: #333;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Campos de entrada básicos */
+.inputField {
+  margin-bottom: 1.25rem;
+}
+
+.inputField label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #000000;
+  margin-bottom: 0.3rem;
+}
+
+.inputField input,
+.inputField textarea,
+.selectInput {
+  margin-top: 0.3rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.inputField input:focus,
+.inputField textarea:focus,
+.selectInput:focus {
+  outline: none;
+  border-color: var(--blue-accent);
+  box-shadow: 0 0 0 2px rgba(0, 195, 255, 0.2);
+  background-color: white;
+}
+
+/* Estilos específicos para el dropdown */
+.selectField {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.selectField label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #000000;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.selectInput {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+/* Carga y previsualizacion de la imagen */
+.imageUploadContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.imageUploadArea {
+  border: 2px dashed #a1a1a1;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.imageUploadArea:hover {
+  background-color: var(--light-gray);
+  border-color: var(--blue-accent);
+}
+
+.imageUploadLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.uploadText {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.imagePreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--box-shadow);
+  border: 3px solid white;
+}
+
+.imagePreviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botones */
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.submitBtn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.submitBtn:hover {
+  background-color: #2e9a20;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.cancelBtn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.cancelBtn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.deleteBtn {
+  background-color: var(--danger-color);
+  color: white;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.deleteBtn:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.deleteImageBtn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.deleteImageBtn:hover {
+  background-color: #d9363e;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.addBtn {
+  background-color: var(--secondary-color);
+  color: white;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.addBtn:hover {
+  background-color: #2db53a;
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+/* Items de arrays */
+.arrayItem {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: var(--transition);
+}
+
+.arrayItem:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Campos de fecha */
+.dateFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dateFields .inputField {
+  margin-bottom: 0;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .dateFields {
+    grid-template-columns: 1fr;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  button {
+    width: 100%;
+  }
+}
